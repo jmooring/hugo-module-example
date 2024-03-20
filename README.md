@@ -44,3 +44,35 @@ To use the greeting shortcode:
 ```go-html-template
 {{< hme/greeting John >}}
 ```
+
+## Inspection
+
+To inspect the module components:
+
+```sh
+hugo mod vendor
+```
+
+This will "vendor" all of the module dependencies into a `_vendor` directory in the root of your project. When you build your site, Hugo looks for modules in the `_vendor` directory, falling back to the module cache.
+
+When you have finished inspecting the files, remove the `_vendor` directory so that you can update the module as needed.
+
+## Update
+
+To update the module to the latest version:
+
+```sh
+hugo mod get -u github.com/jmooring/hugo-module-example
+```
+
+To update the module to a specific version:
+
+```sh
+hugo mod get -u github.com/jmooring/hugo-module-example@v0.1.0
+```
+
+To update all modules to the latest version:
+
+```sh
+hugo mod get -u ./...
+```
