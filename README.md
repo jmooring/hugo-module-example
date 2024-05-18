@@ -1,4 +1,4 @@
-# Hugo Module Example
+# Hugo Module &ndash; Example
 
 This is an example of a Hugo module that provides partial and shortcode templates.
 
