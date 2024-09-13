@@ -1,15 +1,18 @@
 # Hugo Module &ndash; Example
 
-This is an example of a Hugo module that provides partial and shortcode templates, as well as some miscellaneous Sass files.
+This is an example of a Hugo module that provides partial and shortcode templates, as well as some miscellaneous files.
 
 ```text
 layouts/
 ├── partials/
 │   └── hme/
 │       └── greeting.html
-└── shortodes/
+└── shortcodes/
     └── hme/
         └── greeting.html
+sass/
+└── foo/
+    └── _index.scss
 ```
 
 The `hme` subdirectory provides a namespace to avoid collisions with other modules, themes, or custom templates.
