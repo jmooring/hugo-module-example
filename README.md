@@ -10,9 +10,10 @@ layouts/
 └── shortcodes/
     └── hme/
         └── greeting.html
-sass/
-└── foo/
-    └── _index.scss
+miscellaneous/
+└── sass/
+    └── foo/
+        └── _index.scss
 ```
 
 The `hme` subdirectory provides a namespace to avoid collisions with other modules, themes, or custom templates.
