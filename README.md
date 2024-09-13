@@ -1,6 +1,6 @@
 # Hugo Module &ndash; Example
 
-This is an example of a Hugo module that provides partial and shortcode templates.
+This is an example of a Hugo module that provides partial and shortcode templates, as well as some miscellaneous Sass files.
 
 ```text
 layouts/
