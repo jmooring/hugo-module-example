@@ -5,14 +5,14 @@ This is an example of a Hugo module that provides partial and shortcode template
 ```text
 layouts/
 ├── partials/
-│   └── hme/
-│       └── greeting.html
+│   └── hme/
+│       └── greeting.html
 └── shortcodes/
     └── hme/
         └── greeting.html
 miscellaneous/
 └── sass/
-    └── foo/
+    └── bar/
         └── _index.scss
 ```
 
