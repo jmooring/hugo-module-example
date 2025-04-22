@@ -5,8 +5,8 @@ This is an example of a Hugo module that provides partial and shortcode template
 ```text
 layouts/
 ├── partials/
-│   └── hme/
-│       └── greeting.html
+│   └── hme/
+│       └── greeting.html
 └── shortcodes/
     └── hme/
         └── greeting.html
@@ -17,6 +17,8 @@ miscellaneous/
 ```
 
 The `hme` subdirectory provides a namespace to avoid collisions with other modules, themes, or custom templates.
+
+Requires Hugo v0.146.7 or later.
 
 ## Configuration
 
