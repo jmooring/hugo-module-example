@@ -1,19 +1,29 @@
 # Hugo Module &ndash; Example
 
-This is an example of a Hugo module that provides partial and shortcode templates, as well as some miscellaneous files.
+This is an example of a Hugo module that provides:
+
+- partial templates
+- shortcode templates
+- a Sass file
+- a site configuration file
 
 ```text
-layouts/
-├── partials/
-│   └── hme/
-│       └── greeting.html
-└── shortcodes/
-    └── hme/
-        └── greeting.html
-miscellaneous/
-└── sass/
-    └── bar/
-        └── _index.scss
+./
+├── layouts/
+│   ├── _partials/
+│   │   └── hme/
+│   │       └── greeting.html
+│   └── _shortcodes/
+│       └── hme/
+│           └── greeting.html
+├── miscellaneous/
+│   └── sass/
+│       └── bar/
+│           └── _index.scss
+├── LICENSE
+├── README.md
+├── go.mod
+└── hugo.yaml
 ```
 
 The `hme` subdirectory provides a namespace to avoid collisions with other modules, themes, or custom templates.
