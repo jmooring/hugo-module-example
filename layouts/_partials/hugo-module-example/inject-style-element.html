@@ -1,4 +1,4 @@
-{{ $id := print "h" .filename | hash.XxHash }}
+{{ $id := print "h" (.filename | hash.XxHash) }}
 {{ $targetPath := print $id ".css" }}
 {{ $css := (.css | resources.FromString $targetPath | minify).Content }}
 
