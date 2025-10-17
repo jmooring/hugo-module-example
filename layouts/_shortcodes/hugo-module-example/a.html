@@ -1,0 +1,10 @@
+{{ $css := `
+p.hugo-module-example.a {
+  color: red;
+}
+`}}
+
+{{ $opts := dict "css" $css "filename" templates.Current.Filename }}
+{{ partial "hugo-module-example/inject-style-element.html" $opts }}
+
+<p class="hugo-module-example a">This is from layouts/_shortcodes/hugo-module-example/a.html</p>

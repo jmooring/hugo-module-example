@@ -8,27 +8,19 @@ This is an example of a Hugo module that provides:
 - a site configuration file
 
 ```text
-./
-├── layouts/
-│   ├── _partials/
-│   │   └── hme/
-│   │       └── greeting.html
-│   └── _shortcodes/
-│       └── hme/
-│           └── greeting.html
-├── miscellaneous/
-│   └── sass/
-│       └── bar/
-│           └── _index.scss
-├── LICENSE
-├── README.md
-├── go.mod
-└── hugo.yaml
+layouts/
+├── _partials/
+│   └── hugo-module-example/
+│       └── inject-style-element.html
+└── _shortcodes/
+    └── hugo-module-example/
+        ├── a.html
+        └── b.html
 ```
 
-The `hme` subdirectory provides a namespace to avoid collisions with other modules, themes, or custom templates.
+The `hugo-module-example` subdirectories act as a namespace to prevent naming conflicts with templates from other themes, modules, or custom layouts.
 
-Requires Hugo v0.146.7 or later.
+Requires Hugo v0.146.0 or later.
 
 ## Configuration
 
@@ -49,16 +41,12 @@ path = 'github.com/jmooring/hugo-module-example'
 
 ## Usage
 
-To use the greeting partial:
+To call the shortcodes:
 
-```go-html-template
-{{ partial "hme/greeting.html" "John" }}
-```
+```text
+{{< hugo-module-example/a >}}
 
-To use the greeting shortcode:
-
-```go-html-template
-{{< hme/greeting John >}}
+{{< hugo-module-example/b >}}
 ```
 
 ## Inspection
