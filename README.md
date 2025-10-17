@@ -1,11 +1,13 @@
 # Hugo Module &ndash; Example
 
-This is an example of a Hugo module that provides:
+This is an example of a Hugo module that provides two shortcodes:
 
-- partial templates
-- shortcode templates
-- a Sass file
-- a site configuration file
+- `green.html` renders the inner Markdown in green
+- `red.html` renders the inner Markdown in red
+
+Neither shortcode uses inline styling. Instead, both call the `inject-style-element` partial, which dynamically inserts a shortcode-specific `style` element into the document's `head` element.
+
+The module employs the `hugo-module-example` subdirectory structure as a namespace to prevent naming conflicts with other templates.
 
 ```text
 layouts/
@@ -14,11 +16,9 @@ layouts/
 │       └── inject-style-element.html
 └── _shortcodes/
     └── hugo-module-example/
-        ├── a.html
-        └── b.html
+        ├── green.html
+        └── red.html
 ```
-
-The `hugo-module-example` subdirectories act as a namespace to prevent naming conflicts with templates from other themes, modules, or custom layouts.
 
 Requires Hugo v0.146.0 or later.
 
@@ -44,9 +44,13 @@ path = 'github.com/jmooring/hugo-module-example'
 To call the shortcodes:
 
 ```text
-{{< hugo-module-example/a >}}
+{{< hugo-module-example/green >}}
+This is a **strong** word.
+{{< /hugo-module-example/green >}}
 
-{{< hugo-module-example/b >}}
+{{< hugo-module-example/green >}}
+This is an _emphasized_ word.
+{{< /hugo-module-example/green >}}
 ```
 
 ## Inspection

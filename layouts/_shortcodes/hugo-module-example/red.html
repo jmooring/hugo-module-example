@@ -1,5 +1,5 @@
 {{ $css := `
-p.hugo-module-example.a {
+p.hugo-module-example.red {
   color: red;
 }
 `}}
@@ -7,4 +7,4 @@ p.hugo-module-example.a {
 {{ $opts := dict "css" $css "filename" templates.Current.Filename }}
 {{ partial "hugo-module-example/inject-style-element.html" $opts }}
 
-<p class="hugo-module-example a">This is from layouts/_shortcodes/hugo-module-example/a.html</p>
+<div class="hugo-module-example red">{{ .Inner | .Page.RenderString }}</div>
