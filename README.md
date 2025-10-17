@@ -48,9 +48,9 @@ To call the shortcodes:
 This is a **strong** word.
 {{< /hugo-module-example/green >}}
 
-{{< hugo-module-example/green >}}
+{{< hugo-module-example/red >}}
 This is an _emphasized_ word.
-{{< /hugo-module-example/green >}}
+{{< /hugo-module-example/red >}}
 ```
 
 ## Inspection
