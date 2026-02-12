@@ -1,0 +1,10 @@
+{{ $css := `
+div.hugo-module-example.green {
+  color: green;
+}
+`}}
+
+{{ $opts := dict "css" $css "filename" templates.Current.Filename }}
+{{ partial "hugo-module-example/inject-style-element.html" $opts }}
+
+<div class="hugo-module-example green">{{ .Inner | .Page.RenderString (dict "display" "block") }}</div>

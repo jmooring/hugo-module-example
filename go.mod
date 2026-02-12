@@ -1,3 +1,3 @@
-module github.com/jmooring/hugo-module-forum-topic-56376
+module github.com/jmooring/hugo-module-example
 
-go 1.26.0
+go 1.24.0
